@@ -1,6 +1,7 @@
 spring:
   application:
     name: Config-Dev
+  port: 8085
 eureka:
   instance:
     prefer-ip-address: true
