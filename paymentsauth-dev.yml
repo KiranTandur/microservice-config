@@ -135,7 +135,7 @@ feature:
   dbmigration:
     oracle:
       read:
-        enable: true
+        enable: false
       write:
         enable: true
     postgres:
