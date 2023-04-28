@@ -1,0 +1,550 @@
+gateway:
+  hostResponseCodeMapping:
+    109:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    229:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    230:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    234:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    235:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    237:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    240:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    244:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    245:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    246:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    261:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    263:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    264:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    265:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    266:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    267:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    268:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    273:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    275:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    #INSUFFICIENT_FUNDS credit floor
+    302:
+      declined: true
+      resultCode: 5007
+      invalidRequest: false
+    303:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    304:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    #REFERRAL Call
+    401:
+      declined: true
+      resultCode: 5012
+      invalidRequest: true
+    #REFERRAL Default Call
+    402:
+      declined: false
+      resultCode: 5012
+      invalidRequest: true
+    501:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    502:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    503:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    #INSUFFICIENT_FUNDS Over Limit
+    509:
+      declined: true
+      resultCode: 5007
+      invalidRequest: false
+    510:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    #INSUFFICIENT_FUNDS Insufficient Funds
+    521:
+      declined: true
+      resultCode: 5007
+      invalidRequest: false
+    523:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    524:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    530:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    531:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    570:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    571:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    572:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    595:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    596:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    597:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    606:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    704:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    740:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    741:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    754:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    #REFERRAL Call
+    802:
+      declined: true
+      resultCode: 5012
+      invalidRequest: true
+    806:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    811:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    813:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    825:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    904:
+      declined: true
+      resultCode: 5008
+      invalidRequest: false
+    #invalid account number
+    201:
+      declined: false
+      resultCode: 5005
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "card.number is invalid."
+      invalidRequestDetail: "card.number"
+    #INVALID_AMOUNT
+    202:
+      declined: false
+      resultCode: 5004
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "amount is invalid."
+      invalidRequestDetail: "amount"
+    #INVALID_AMOUNT Zero Amount
+    203:
+      declined: false
+      resultCode: 5004
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "amount is invalid."
+      invalidRequestDetail: "amount"
+    #OTHER_ERRORS
+    204:
+      declined: false
+      resultCode: 5099
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #INVALID_AMOUNT Bad Total Auth Amount
+    205:
+      declined: false
+      resultCode: 5004
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "amount is invalid."
+      invalidRequestDetail: "amount"
+    #field format error Invalid SKU Number
+    218:
+      declined: false
+      resultCode: 5020
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #field format error Invalid Credit Plan
+    219:
+      declined: false
+      resultCode: 5020
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #field format error Invalid Store Number
+    220:
+      declined: false
+      resultCode: 5020
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #CMD_FORMAT_ERROR Invalid Field Data
+    225:
+      declined: false
+      resultCode: 5019
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #CMD_FORMAT_ERROR Missing Companion Data
+    227:
+      declined: false
+      resultCode: 5019
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #invalid merchant info 231
+    231:
+      declined: false
+      resultCode: 5011
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #invalid merchant info 231
+    833:
+      declined: false
+      resultCode: 5011
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #INVALID_ACCOUNT_NUMBER Does Not Match MOP
+    233:
+      declined: false
+      resultCode: 5005
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "card.number is invalid."
+      invalidRequestDetail: "card.number"
+    #OTHER_ERRORS Invalid Currency
+    238:
+      declined: false
+      resultCode: 5099
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #OTHER_ERRORS Invalid MOP for Transaction Division
+    239:
+      declined: false
+      resultCode: 5099
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #OTHER_ERRORS Illegal Action
+    241:
+      declined: false
+      resultCode: 5099
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #CMD_FORMAT_ERROR
+    243:
+      declined: false
+      resultCode: 5019
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #CMD_FORMAT_ERROR
+    248:
+      declined: false
+      resultCode: 5019
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #OTHER_ERRORS Invalid MCC
+    249:
+      declined: false
+      resultCode: 5099
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #OTHER_ERRORS Invalid Transaction Type
+    253:
+      declined: false
+      resultCode: 5099
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #CMD_FORMAT_ERROR Missing Customer Service Phone
+    257:
+      declined: false
+      resultCode: 5019
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #CMD_FORMAT_ERROR Not Authorized to Send Record
+    258:
+      declined: false
+      resultCode: 5019
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #CMD_FORMAT_ERROR Authorization Code/Response Date Invalid
+    262:
+      declined: false
+      resultCode: 5019
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #SUSPECTED_FRAUD Card Prefix on Fraud Filter List
+    269:
+      declined: false
+      resultCode: 5059
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #SUSPECTED_FRAUD Card Number on Fraud Filter List
+    270:
+      declined: false
+      resultCode: 5059
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #SUSPECTED_FRAUD Country on Fraud Filter List
+    271:
+      declined: false
+      resultCode: 5059
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #VOID_ERROR
+    305:
+      declined: false
+      resultCode: 5014
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #VOID_ERROR Amount Mis- match
+    306:
+      declined: false
+      resultCode: 5014
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #VOID_ERROR Authorization Not Found
+    307:
+      declined: false
+      resultCode: 5014
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #DEBIT_EXCESSIVE_PIN_ATTEMPTS Excessive PIN Try
+    508:
+      declined: false
+      resultCode: 5004
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #INVALID_EXPIRATION_DATE
+    522:
+      declined: false
+      resultCode: 5006
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "ExpirationMonth/ExpirationYear. is invalid."
+      invalidRequestDetail: "ExpirationMonth/ExpirationYear."
+    #INVALID_ACCOUNT_NUMBER Invalid CC Number
+    591:
+      declined: false
+      resultCode: 5005
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "card.number is invalid."
+      invalidRequestDetail: "card.number"
+    #INVALID_AMOUNT Bad Amount
+    592:
+      declined: false
+      resultCode: 5004
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "amount is invalid."
+      invalidRequestDetail: "amount"
+    #OTHER_ERRORS Other Error
+    594:
+      declined: false
+      resultCode: 5099
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #INVALID_ACCOUNT_NUMBER Invalid Institution Code
+    602:
+      declined: false
+      resultCode: 5005
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "card.number is invalid."
+      invalidRequestDetail: "card.number"
+    #INVALID_ACCOUNT_NUMBER Invalid Institution
+    603:
+      declined: false
+      resultCode: 5005
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "card.number is invalid."
+      invalidRequestDetail: "card.number"
+    #INVALID_EXPIRATION_DATE Invalid Expiration Date
+    605:
+      declined: false
+      resultCode: 5006
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "ExpirationMonth/ExpirationYear. is invalid."
+      invalidRequestDetail: "ExpirationMonth/ExpirationYear."
+    #INVALID_AMOUNT Invalid Amount
+    607:
+      declined: false
+      resultCode: 5004
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "amount is invalid."
+      invalidRequestDetail: "amount"
+    #SUSPECTED_FRAUD BIN Block
+    610:
+      declined: false
+      resultCode: 5059
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #invalid account number Not Enrolled in Shop with Points
+    617:
+      declined: false
+      resultCode: 5005
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "card.number is invalid."
+      invalidRequestDetail: "card.number"
+    #OTHER_ERRORS Invalid MOP / Unauthorized user
+    834:
+      declined: false
+      resultCode: 5099
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "request is invalid."
+      invalidRequestDetail: "request"
+    #INVALID_EXPIRATION_DATE Invalid Expiration
+    903:
+      declined: false
+      resultCode: 5006
+      invalidRequest: true
+      invalidRequestCode: "PMT_4000"
+      invalidRequestMessage: "ExpirationMonth/ExpirationYear. is invalid."
+      invalidRequestDetail: "ExpirationMonth/ExpirationYear."
+    #001 No answer, 301 Issuer Unavailable , 281 Token Unavailable,236 will be 500 http code
+    #PROCESSOR_ERROR Process Unavailable 902 will be a 500
