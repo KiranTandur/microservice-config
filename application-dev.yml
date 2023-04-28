@@ -1,13 +1,200 @@
-spring:
-  application:
-    name: Config-Dev
-  port: 8085
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    fetch-registry: true
-    rigister-with-eureka: true
-    service-url:
-      default-zone: http://localhost:8761/eureka
+### Configuration Properties for dev
+###
+### Spring Cloud Config value for profile=dev
+###
+### All properties in this profile can be used
+### by setting up SPRING_PROFILES_ACTIVE=dev.
+### If you are using the API, use the name in profile.
+### Add your business logic properties for this
+### environment here.
+###
+### https://github.intuit.com/services-config/config-reference-app/wiki/Config-Properties-Setup
 
+app:
+  env: dev
+  description: This app properties was built by config-onboarding.
+
+jsk:
+  lastmile:
+    enabled: false
+
+aws:
+  memcache:
+    fis:
+      servers: localhost:11211
+    paypal:
+      servers: localhost:11212
+  txn:
+    sns:
+      topic: qa-payapi-transaction-topic
+    nonpci:
+      topic: dev-payapi-transaction-topic-nonpci
+spring:
+  oracle:
+    datasource:
+      type: com.zaxxer.hikari.HikariDataSource
+      jdbc-url: jdbc:oracle:thin:@localhost:1521:payauth
+      username: "{secret}idps:/paymentsauth/secrets/dbconfig/datasource.username"
+      password: "{secret}idps:/paymentsauth/secrets/dbconfig/datasource.password"
+      driver-class-name: oracle.jdbc.OracleDriver
+      initial-size: 5
+      ucm:
+        default-auto-commit: true
+  postgres:
+    datasource:
+      jdbc-url: jdbc:postgresql://localhost:5432/test
+      username: "postgres"
+      password: "admin"
+      driver-class-name: org.postgresql.Driver
+  t360:
+    datasource:
+      jdbc-url: jdbc:oracle:thin:@localhost:1522/IHUB
+      username: "{secret}idps:/paymentsauth/secrets/dbconfig/t360.username"
+      password: "{secret}idps:/paymentsauth/secrets/dbconfig/t360.password"
+
+ext:
+  fis:
+    service:
+      base-url: https://int-payments-one-retail-uat.fisglobal.com/
+      ist-api-path: /ist/v2.16.0
+      token-path: /oauth2/token
+  paypal:
+    service:
+      soft-descriptor: "PYMT SOLN"
+
+feature:
+  dupdetection:
+    db:
+      enable: false
+  ach:
+    duplicate:
+      detection:
+        debit: false
+    refund:
+      inactive.merchant.enable: true
+    store.failure.txn.message.enable: true
+    mapper:
+      mapstruct.enable: false
+  paypal:
+    enable: true
+    username: "{secret}idps:/paymentsauth/secrets/paypal/username"
+    password: "{secret}idps:/paymentsauth/secrets/paypal/password"
+    store.failure.txn.message.enable: true
+  pos_bridge:
+    enabled: true
+  charge:
+    autovoid:
+      cvv:
+        description: "%s rejected"
+    chase:
+      retryList: 000,236
+    posBridge:
+      appid: Intuit.payments.pos_bridge
+    qbPosData:
+      api:
+        v2:
+          whitelist: Intuit.payments.pos_bridge,4613955410429716591,4613955410429498990,Intuit.sbg.payments.gopayment,5693693421089207095,5693693421089207128,GoPayment,qbm,Junit-REST,4612829510637694189,5909866203308030523,Intuit.platform.paymentsapi.functionaltests
+    fis:
+      enable: true
+      username: "{secret}idps:/paymentsauth/secrets/fis/uat/username"
+      password: "{secret}idps:/paymentsauth/secrets/fis/uat/password"
+      jwt: "{secret}idps:/paymentsauth/secrets/fis/uat/jwt"
+      routing:
+        usa:
+          gateway-id: 22
+        canada:
+          gateway-id: 25
+        amex:
+          gateway-id: "03"
+        priority: 1
+      payfac:
+        usa:
+          id: 433928
+        canada:
+          id: 433942
+      td:
+        regular:
+          usa: 219040
+          canada: 257579
+        pinless: 388840
+      responsecode:
+        retrylist: 19,91,8,96,903
+        declinedlist: 934,935,936,939,940
+      l3Enhancement:
+        applicable-card-brands: Visa
+      amex:
+        enable: true
+        allowedCompanies: 9130350337317016
+      idempotency:
+        update: true
+        retryHttpCodes: 502,503
+    l3:
+      invoice-items-allowedSize: 100
+      dropIfExceedsAllowedSize: false
+      enhancementEnabled: true
+  dbmigration:
+    oracle:
+      read:
+        enable: true
+      write:
+        enable: true
+    postgres:
+      read:
+        enable: false
+      write:
+        enable: false
+
+
+
+intuit:
+  ams:
+    app:
+      url: https://paymentaccount-qal.api.intuit.com/v2/accounts/
+    service:
+      connect:
+        timeout: 1000
+      read:
+        timeout: 5000
+      write:
+        timeout: 5000
+      retry-count: 0
+      retry-delay: 0
+
+payapi:
+  level3processing:
+    cardbrands:
+      dropdata: NA
+
+#Emulation
+emulate:
+  enable: true
+
+#PaymentsAuth Metadata configs
+metadata:
+  update:
+    enable: false
+
+paymentsauth:
+  card:
+    identification:
+      bin-range:
+        visa:
+          - "^4[0-9]{6,}$"
+        mc:
+          - "^5[1-5][0-9]{5,}$"
+          - "^2(?:7[0-1][0-9]|720|22[1-9]|2[3-9][0-9]|[3-6][0-9][0-9])[0-9]{4,}$"
+        amex:
+          - "^3[47][0-9]{5,}$"
+        diners:
+          - "^3(?:0[0-5]|[68][0-9]|095)[0-9]{4,}$"
+        discover:
+          - "^6(?:011|(?:4[4-9]|5[0-9])|2[4-6]|28[2-8]|22(?:1[2-9][6-9]|[2-8][0-9]{2}|9[0-2][0-5]))[0-9]{3,}$"
+          - "^81([0-6][0-9]|7[01])[0-9]{3,}$"
+        jcb:
+          - "^3(0(8[89]|9[0-4])|(09[6-9]|10[0-2])|(11[2-9]|120)|(15[89])|(33[7-9]|34[0-9])|(52[89]|5[3-8][0-9]))[0-9]{3,}$"
+  webClient:
+    maxIdleTimeSeconds: 20
+  apis:
+    dupdetection:
+      oracle:
+        allowlist: v2/charges
