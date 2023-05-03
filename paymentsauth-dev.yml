@@ -139,11 +139,11 @@ feature:
           enable: false
         write:
           enable: true
-    postgres:
-      read:
-        enable: false
-      write:
-        enable: false
+      postgres:
+        read:
+          enable: false
+        write:
+          enable: false
 
 
 
