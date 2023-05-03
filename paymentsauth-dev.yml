@@ -133,11 +133,12 @@ feature:
       dropIfExceedsAllowedSize: false
       enhancementEnabled: true
   dbmigration:
-    oracle:
-      read:
-        enable: false
-      write:
-        enable: true
+    echeck:
+      oracle:
+        read:
+          enable: false
+        write:
+          enable: true
     postgres:
       read:
         enable: false
