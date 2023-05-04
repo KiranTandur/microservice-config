@@ -43,8 +43,8 @@ spring:
   postgres:
     datasource:
       jdbc-url: jdbc:postgresql://localhost:5432/qa-payauth
-      username: "postgres"
-      password: "admin"
+      username: "{secret}idps:/paymentsauth/secrets/dbconfig/postgres.username"
+      password: "{secret}idps:/paymentsauth/secrets/dbconfig/postgres.password"
       driver-class-name: org.postgresql.Driver
   t360:
     datasource:
