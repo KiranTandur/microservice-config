@@ -42,7 +42,7 @@ spring:
         default-auto-commit: true
   postgres:
     datasource:
-      jdbc-url: jdbc:postgresql://localhost:5432/test
+      jdbc-url: jdbc:postgresql://localhost:5432/qa-payauth
       username: "postgres"
       password: "admin"
       driver-class-name: org.postgresql.Driver
