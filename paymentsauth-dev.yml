@@ -40,12 +40,22 @@ spring:
       initial-size: 5
       ucm:
         default-auto-commit: true
+      hikari:
+        idle-timeout: 10000
+        maximum-pool-size: 25
+        minimum-idle: 5
+        pool-name: OracleHikariPool
   postgres:
     datasource:
       jdbc-url: jdbc:postgresql://localhost:5432/qa-payauth
       username: "{secret}idps:/paymentsauth/secrets/dbconfig/postgres.username"
       password: "{secret}idps:/paymentsauth/secrets/dbconfig/postgres.password"
       driver-class-name: org.postgresql.Driver
+      hikari:
+        idle-timeout: 10000
+        maximum-pool-size: 25
+        minimum-idle: 5
+        pool-name: PostgresHikariPool
   t360:
     datasource:
       jdbc-url: jdbc:oracle:thin:@localhost:1522/IHUB
