@@ -26,6 +26,7 @@ server:
 spring:
   oracle:
     datasource:
+      type: com.zaxxer.hikari.HikariDataSource
       jdbc-url: jdbc:oracle:thin:@localhost:1521:payauth
       username: "{secret}idps:/paymentsauth/secrets/dbconfig/datasource.username"
       password: "{secret}idps:/paymentsauth/secrets/dbconfig/datasource.password"
