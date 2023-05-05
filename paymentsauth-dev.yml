@@ -47,6 +47,7 @@ spring:
         pool-name: OracleHikariPool
   postgres:
     datasource:
+      type: com.zaxxer.hikari.HikariDataSource
       jdbc-url: jdbc:postgresql://localhost:5432/qa-payauth
       username: "{secret}idps:/paymentsauth/secrets/dbconfig/postgres.username"
       password: "{secret}idps:/paymentsauth/secrets/dbconfig/postgres.password"
