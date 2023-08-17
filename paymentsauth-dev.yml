@@ -149,11 +149,11 @@ feature:
   dbmigration:
     echeck:
       oracle:
-        read-enabled: false
-        write-enabled: false
-      postgres:
         read-enabled: true
         write-enabled: true
+      postgres:
+        read-enabled: false
+        write-enabled: false
     card:
       oracle:
         read-enabled: true
