@@ -150,7 +150,7 @@ feature:
     echeck:
       oracle:
         read-enabled: false
-        write-enabled: fasle
+        write-enabled: false
       postgres:
         read-enabled: true
         write-enabled: true
