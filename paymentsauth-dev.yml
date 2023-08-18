@@ -71,7 +71,7 @@ sqs:
 dbmigration:
   echeck:
     datasource:
-      primary: postgres
+      primary: oracle
   card:
     datasource:
       primary: oracle
@@ -150,7 +150,7 @@ feature:
     echeck:
       oracle:
         read-enabled: true
-        write-enabled: false
+        write-enabled: true
       postgres:
         read-enabled: false
         write-enabled: true
