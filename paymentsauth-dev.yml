@@ -13,6 +13,9 @@
 app:
   env: dev
   description: This app properties was built by config-onboarding.
+  echeck:
+    time:
+      zone-id: America/Los_Angeles
 
 jsk:
   lastmile:
