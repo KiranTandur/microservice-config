@@ -74,7 +74,7 @@ sqs:
 dbmigration:
   echeck:
     datasource:
-      primary: oracle
+      primary: postgres
   card:
     datasource:
       primary: oracle
